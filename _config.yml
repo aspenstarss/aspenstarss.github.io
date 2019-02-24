@@ -11,7 +11,7 @@ github_repo: "https://github.com/aspenstarss/aspenstarss.github.io.git" # you co
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "精明不如厚道，计较不如坦诚，强势不如和善"
+sidebar-about-description: "谦逊，和善"
 sidebar-avatar: /img/about-me.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
