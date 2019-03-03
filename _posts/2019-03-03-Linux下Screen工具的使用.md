@@ -26,7 +26,7 @@ Screen 是一款由GNU计划开发的用于命令行终端切换的自由软件�
 ```bash
 screen [-opts] [cmd [args]]
 screen -r [host.tty]
-````
+```
 
 ### 选项(即上述命令中`-opts`中可以输入的内容)
 
