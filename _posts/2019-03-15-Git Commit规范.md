@@ -168,11 +168,11 @@ Commitizen是一个撰写合格 Commit message 的工具。
 
 `$ npm install -g commitizen`
 
-*注释：* Ubuntu下安装`node`和`npm`,请不要使用`apt`，会出现版本过低的问题，请参考[Installation](https://github.com/nodejs/help/wiki/Installation)或[ubuntu下安装最新版本nodejs和npm](https://blog.csdn.net/weixin_40933787/article/details/82804295)
+**本人注:** Ubuntu下安装`node`和`npm`,请不要使用`apt`，会出现版本过低的问题，请参考[Installation](https://github.com/nodejs/help/wiki/Installation)或[ubuntu下安装最新版本nodejs和npm](https://blog.csdn.net/weixin_40933787/article/details/82804295)
 
 然后，在项目目录里，运行下面的命令，使其支持 Angular 的 Commit message 格式。
 
-在此处可能会报`ERROR:2错误`，根据[简单使用Commitizen-规范你的commit message](https://www.jianshu.com/p/36d970a2b4da)介绍，首先运行
+**本人注:** 在此处可能会报`ERROR:2错误`，根据[简单使用Commitizen-规范你的commit message](https://www.jianshu.com/p/36d970a2b4da)介绍，首先运行
 
 **`npm init --yes`**
 
