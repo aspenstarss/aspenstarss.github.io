@@ -17,21 +17,21 @@ tags:
 
 #### TensorFlow与CUDA、cuDNN版本的对应关系
 
-| 版本| Python 版本| 编译器| 构建工具| cuDNN| CUDA| 
-| :---:| :---:| :---:| :---:| :---:| :---:| 
-tensorflow_gpu-1.12.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.15.0| 7| 9
-tensorflow_gpu-1.11.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.15.0| 7| 9
-tensorflow_gpu-1.10.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.15.0| 7| 9
-tensorflow_gpu-1.9.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.11.0| 7| 9
-tensorflow_gpu-1.8.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.10.0| 7| 9
-tensorflow_gpu-1.7.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.9.0| 7| 9
-tensorflow_gpu-1.6.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.9.0| 7| 9
-tensorflow_gpu-1.5.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.8.0| 7| 9
-tensorflow_gpu-1.4.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.5.4| 6| 8
-tensorflow_gpu-1.3.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.4.5| 6| 8
-tensorflow_gpu-1.2.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.4.5| 5.1| 8
-tensorflow_gpu-1.1.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.4.2| 5.1| 8
-tensorflow_gpu-1.0.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.4.2| 5.1| 8
+ | 版本 | Python 版本 | 编译器 | 构建工具 | cuDNN | CUDA | 
+ | :---: | :---: | :---: | :---: | :---: | :---: | 
+tensorflow_gpu-1.12.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.15.0 | 7 | 9
+tensorflow_gpu-1.11.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.15.0 | 7 | 9
+tensorflow_gpu-1.10.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.15.0 | 7 | 9
+tensorflow_gpu-1.9.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.11.0 | 7 | 9
+tensorflow_gpu-1.8.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.10.0 | 7 | 9
+tensorflow_gpu-1.7.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.9.0 | 7 | 9
+tensorflow_gpu-1.6.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.9.0 | 7 | 9
+tensorflow_gpu-1.5.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.8.0 | 7 | 9
+tensorflow_gpu-1.4.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.5.4 | 6 | 8
+tensorflow_gpu-1.3.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.4.5 | 6 | 8
+tensorflow_gpu-1.2.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.4.5 | 5.1 | 8
+tensorflow_gpu-1.1.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.4.2 | 5.1 | 8
+tensorflow_gpu-1.0.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.4.2 | 5.1 | 8
 数据来源：[TensorFlow](https://www.tensorflow.org/install/source#linux)
 
 根据TensorFlow[官方回复](https://github.com/tensorflow/tensorflow/issues/26182#issuecomment-467986463) 目前已知tensorflow-gpu-1.13以上版本是基于CUDA10、cuDNN7构建
