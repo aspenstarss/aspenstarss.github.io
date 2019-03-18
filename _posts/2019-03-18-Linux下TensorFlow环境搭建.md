@@ -17,21 +17,21 @@ tags:
 
 #### TensorFlow与CUDA、cuDNN版本的对应关系
 
-|版本|Python 版本|编译器|构建工具|cuDNN|CUDA|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-tensorflow_gpu-1.12.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.15.0|7|9
-tensorflow_gpu-1.11.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.15.0|7|9
-tensorflow_gpu-1.10.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.15.0|7|9
-tensorflow_gpu-1.9.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.11.0|7|9
-tensorflow_gpu-1.8.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.10.0|7|9
-tensorflow_gpu-1.7.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.9.0|7|9
-tensorflow_gpu-1.6.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.9.0|7|9
-tensorflow_gpu-1.5.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.8.0|7|9
-tensorflow_gpu-1.4.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.5.4|6|8
-tensorflow_gpu-1.3.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.4.5|6|8
-tensorflow_gpu-1.2.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.4.5|5.1|8
-tensorflow_gpu-1.1.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.4.2|5.1|8
-tensorflow_gpu-1.0.0|2.7、3.3-3.6|GCC 4.8|Bazel 0.4.2|5.1|8
+| 版本| Python 版本| 编译器| 构建工具| cuDNN| CUDA| 
+| :---:| :---:| :---:| :---:| :---:| :---:| 
+tensorflow_gpu-1.12.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.15.0| 7| 9
+tensorflow_gpu-1.11.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.15.0| 7| 9
+tensorflow_gpu-1.10.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.15.0| 7| 9
+tensorflow_gpu-1.9.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.11.0| 7| 9
+tensorflow_gpu-1.8.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.10.0| 7| 9
+tensorflow_gpu-1.7.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.9.0| 7| 9
+tensorflow_gpu-1.6.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.9.0| 7| 9
+tensorflow_gpu-1.5.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.8.0| 7| 9
+tensorflow_gpu-1.4.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.5.4| 6| 8
+tensorflow_gpu-1.3.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.4.5| 6| 8
+tensorflow_gpu-1.2.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.4.5| 5.1| 8
+tensorflow_gpu-1.1.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.4.2| 5.1| 8
+tensorflow_gpu-1.0.0| 2.7、3.3-3.6| GCC 4.8| Bazel 0.4.2| 5.1| 8
 数据来源：[TensorFlow](https://www.tensorflow.org/install/source#linux)
 
 根据TensorFlow[官方回复](https://github.com/tensorflow/tensorflow/issues/26182#issuecomment-467986463) 目前已知tensorflow-gpu-1.13以上版本是基于CUDA10、cuDNN7构建
@@ -97,7 +97,8 @@ export LD_LIBRARY_PATH=$HOME/cuda9/lib64/:$LD_LIBRARY_PATH
 2. 输入`make`编译（如果之前执行过`make`，请先执行`make clean`清理）
 3. 进入设备信息查询目录  
 `cd ~/NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release`
-4. 运行` ./deviceQuery `，如果出现显卡信息，且最后一行为`Result = PASS`即为成功
+4. 运行` ./deviceQuery `  
+如果出现显卡信息，且最后一行为`Result = PASS`即为成功
 5. [可选的]检查一下系统和CUDA-Capable device的连接情况  
 `./bandwidthTest`
 
@@ -124,9 +125,10 @@ cuda所在目录：
 Do you wish the installer to prepend the Anaconda3 install location
 to PATH in your /home/hj/.bashrc ? [yes|no]
 ```
-7. 如果上一步按了默认，则手动在.bashrc文件中添加以下内容
+7. 如果上一步按了默认，则手动在.bashrc文件中添加以下内容  
 `export PATH=$HOME/anaconda3/bin:$PATH`（如果安装在其他目录请将$HOME更换成对应目录）  
-然后`source ~/.bashrc`
+然后  
+`source ~/.bashrc`
 8. 创建新的虚拟环境  
 `conda create -n 环境名称`
 9. 启动虚拟环境  
