@@ -4,7 +4,7 @@ title:      Linux下非root用户TensorFlow GPU环境搭建
 subtitle:   搭环境总是一把心酸一把泪
 date:       2019-03-18
 author:     AspenStars
-header-img: img/post-bg-keybord.jpg
+header-img: img/post-bg-map.jpg
 catalog: true
 tags:
     - Linux
