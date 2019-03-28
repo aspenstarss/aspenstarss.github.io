@@ -27,15 +27,13 @@ tags:
 8. 尽情享受软件
 
 ## 安装过程
-1. 下载软件源码
-这里可以先进入你的下载目录，比如Download目录，以免找不到下载的文件
-
-这里提供一份tree的源码下载地址，来自[Indiana State University](https://www.indstate.edu/)，其他软件可以尝试在[GitHub](https://github.com/)或者Google寻找。
+1. **下载软件源码**  
+这里可以先进入你的下载目录，比如Download目录，以免找不到下载的文件  
+这里提供一份tree的源码下载地址，来自[Indiana State University](https://www.indstate.edu/)，其他软件可以尝试在[GitHub](https://github.com/)或者Google寻找  
 ```
 wget http://mama.indstate.edu/users/ice/tree/src/tree-1.6.0.tgz
 ```
-
-2. 解压
+2. **解压**
 ```
 tar -zxvf <你下载的文件名> # gz压缩格式
 tar -jxvf <你下载的文件名> # bz2压缩格式
@@ -45,13 +43,13 @@ tar -jxvf <你下载的文件名> # bz2压缩格式
 tar -zxvf tree-1.6.0.tgz
 ```
 
-3. 进入解压后的文件夹，并编译
+3. **进入解压后的文件夹，并编译**
 ```
 cd tree-1.6.0
 make
 ```
 
-4. 建立bin目录
+4. **建立bin目录**  
 为了不把PATH路径弄得太乱，可以在自己目录下建立一个`local/bin`目录，这次添加路径到PATH后，以后也不用再添加了
 ```
 cd ~
@@ -59,7 +57,7 @@ mkdir local
 mkdir local/bin
 ```
 
-5. 建立软连接
+5. **建立软连接**  
 将刚刚编译得到的文件软连接(快捷方式)到刚刚生成的bin目录
 ```
 ln -s <源文件> <目标文件>
@@ -71,7 +69,7 @@ ln -s <源文件> <目标文件>
 ln -s /home/myname/tree-1.6.0/tree /home/myname/local/bin/tree
 ```
 
-6. 添加到PATH
+6. **添加到PATH**  
 添加到自己的PATH中，才能直接使用命令
 ```
 vi ~/.bashrc
@@ -82,9 +80,9 @@ export PATH=/home/myname/local/bin:$PATH
 ```
 按`ESC`输入`：`，在输入`wq`保存并退出
 
-7. 生效PATH
+7. **生效PATH**  
 ```
 source ~/.bashrc
 ```
 
-8. 尽情享受软件
+8. **尽情享受软件**
