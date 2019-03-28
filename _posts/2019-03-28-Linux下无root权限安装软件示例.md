@@ -1,10 +1,10 @@
 ---
 layout:     post
 title:      Linux下无root权限安装软件示例
-subtitle:   遇见即更新，方便查看，熟悉命令
+subtitle:   使用root权限需谨慎
 date:       2019-03-28
 author:     AspenStars
-header-img: img/post-bg-keybord.jpg
+header-img: img/post-bg-debug.png
 catalog: true
 tags:
     - Linux
