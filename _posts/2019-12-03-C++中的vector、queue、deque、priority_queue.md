@@ -1,10 +1,27 @@
+---
+layout:     post
+title:      C++中的vector、queue、deque、priority_queue
+subtitle:   声明方式、常用函数、复杂度
+date:       2019-12-03
+author:     AspenStars
+header-img: img/post-bg-keybord.jpg
+catalog: true
+tags:
+    - 数据结构
+    - 算法
+    - C++
+    - leetcode
+---
+
 ### vector
 位于头文件`<vector>`中
 
 #### 时间复杂度
-- 创建
-- 插入
-- 删除
+std::vector 是 STL 提供的 内存连续的 、 可变长度 的数组（亦称列表）数据结构。能够提供线性复杂度的插入和删除，以及常数复杂度的随机访问。
+- 创建空vector：O(1)
+- 访问：O(1)
+- 插入push_back()：均摊复杂度为 常数 ，最坏为线性复杂度
+- 删除末尾元素：O(1)
 
 #### 构造函数
 ```c++
@@ -24,6 +41,47 @@ iterator end():返回向量尾指针，指向向量最后一个元素的下一�
 bool empty() const:判断向量是否为空，若为空，则向量中无元素
 int size() const:返回向量中元素的个数
 int capacity() const:返回当前向量所能容纳的最大元素值
+```
+
+#### 实例
+```c++
+#include <string.h>
+#include <vector>
+#include <iostream>
+#include <algorithm>  //sort()
+using namespace std;
+
+static bool cmp(const int &a,const int &b)
+{
+    return a < b; //升序排列（与符号方向相同），如果改为return a > b，则为降序
+}
+
+int main()
+{
+    vector<int>obj;//创建一个向量存储容器 int
+    vector<int> data {1, 2, 3};//C++11支持列表初始化 
+    obj.push_back(i);// push_back(elem)在数组最后添加数据 
+    obj.pop_back();//去掉数组最后一个数据 
+    obj.size()  //size()容器中实际数据个数 
+    sort(obj.begin(),obj.end());//从小到大排序
+    reverse(obj.begin(),obj.end());//从大到小排序
+    sort(obj.begin(),obj.end(),cmp);//自定义排序函数
+
+    cout<<obj[i]<<" ";  // 直接利用下标访问
+
+    //使用迭代器将容器中数据输出 
+    vector<int>::iterator it;//声明一个迭代器，来访问vector容器，作用：遍历或者指向vector容器的元素 
+    for(it=obj.begin();it!=obj.end();it++)
+    {
+        cout<<*it<<" ";
+    }
+
+    //定义二维动态数组5行6列 
+    int N=5, M=6; 
+    vector<vector<int> > obj(N, vector<int>(M)); 
+ 
+    return 0;
+}
 ```
 
 #### 其他函数
@@ -74,53 +132,17 @@ void swap(vector&):交换两个同类型向量的数据
 void assign(int n,const T& x):设置向量中第n个元素的值为x
 void assign(const_iterator first,const_iterator last):向量中[first,last)中元素设置成当前向量元素
 ```
-#### 实例
-```c++
-#include <string.h>
-#include <vector>
-#include <iostream>
-#include <algorithm>  //sort()
-using namespace std;
 
-static bool cmp(const int &a,const int &b)
-{
-    return a < b; //升序排列（与符号方向相同），如果改为return a > b，则为降序
-}
-
-int main()
-{
-    vector<int>obj;//创建一个向量存储容器 int
-    obj.push_back(i);// push_back(elem)在数组最后添加数据 
-    obj.pop_back();//去掉数组最后一个数据 
-    obj.size()  //size()容器中实际数据个数 
-    sort(obj.begin(),obj.end());//从小到大排序
-    reverse(obj.begin(),obj.end());//从大到小排序
-    sort(obj.begin(),obj.end(),cmp);//自定义排序函数
-
-    cout<<obj[i]<<" ";  // 直接利用下标访问
-
-    //使用迭代器将容器中数据输出 
-    vector<int>::iterator it;//声明一个迭代器，来访问vector容器，作用：遍历或者指向vector容器的元素 
-    for(it=obj.begin();it!=obj.end();it++)
-    {
-        cout<<*it<<" ";
-    }
-
-    //定义二维动态数组5行6列 
-    int N=5, M=6; 
-    vector<vector<int> > obj(N, vector<int>(M)); 
- 
-    return 0;
-}
-```
 ### queue
 定义于头文件`<queue>`  
-`queue`在底层容器尾端推入元素，从首端弹出元素。
+`queue`在底层容器尾端推入元素，从首端弹出元素。  
+std::deque 是 STL 提供的 双端队列 数据结构。能够提供线性复杂度的插入和删除，以及常数复杂度的随机访问
 
 #### 时间复杂度
-- 创建
-- 插入
-- 删除
+- 访问：常数复杂度
+- 创建空：常数复杂度
+- 插入`push_front()`、 `push_back()`：常数复杂度
+- 删除`pop_front()`、`pop_back()`：常数复杂度
 
 #### 基本操作
 ```c++
