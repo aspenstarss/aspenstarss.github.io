@@ -24,7 +24,7 @@ std::vector 是 STL 提供的 内存连续的 、 可变长度 的数组（亦�
 - 删除末尾元素：O(1)
 
 #### 构造函数
-```c++
+```
 vector():创建一个空vector
 vector(int nSize):创建一个vector,元素个数为nSize
 vector(int nSize,const t& t):创建一个vector，元素个数为nSize,且值均为t
@@ -32,7 +32,7 @@ vector(const vector&):复制构造函数
 vector(begin,end):复制[begin,end)区间内另一个数组的元素到vector中
 ```
 #### 常用函数
-```c++
+```
 void push_back(const T& x):向量尾部增加一个元素X
 void pop_back():删除向量中最后一个元素
 void clear():清空向量中所有元素
@@ -58,7 +58,7 @@ static bool cmp(const int &a,const int &b)
 
 int main()
 {
-    vector<int>obj;//创建一个向量存储容器 int
+    vector<int>obj;  // 创建一个向量存储容器 int
     vector<int> data {1, 2, 3};//C++11支持列表初始化 
     obj.push_back(i);// push_back(elem)在数组最后添加数据 
     obj.pop_back();//去掉数组最后一个数据 
