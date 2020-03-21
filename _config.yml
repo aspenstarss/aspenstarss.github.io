@@ -22,7 +22,7 @@ github_username:    aspenstarss
 # facebook_username:  
 # jianshu_username:   
 #twitter_username:  
-#facebook_username:  huxpro
+#facebook_username:  
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -64,7 +64,7 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-disqus_username: starsaspen
+disqus_username: aspenstars
 
 # Gitalk
 gitalk:
