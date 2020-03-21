@@ -44,11 +44,11 @@ int capacity() const:返回当前向量所能容纳的最大元素值
 ```
 
 #### 实例
-```c++
-#include <string.h>
-#include <vector>
-#include <iostream>
-#include <algorithm>  //sort()
+```
+#include <string.h>  
+#include <vector>  
+#include <iostream>  
+#include <algorithm>  //sort()  
 using namespace std;
 
 static bool cmp(const int &a,const int &b)
