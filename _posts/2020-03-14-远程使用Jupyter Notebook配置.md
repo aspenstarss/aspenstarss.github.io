@@ -10,8 +10,6 @@ tags:
     - Python
     - Jupyter Notebook
     - 服务器
-    - 远程
-    - 配置
 ---
 ## ssh 配置
 
