@@ -13,6 +13,8 @@ tags:
     - CUDNN
 ---
 
+更新于2020-4-21
+
 ## 安装前的准备工作
 
 #### TensorFlow与CUDA、cuDNN版本的对应关系
@@ -61,12 +63,31 @@ cuDNN（CUDA Deep Neural Network library）：是NVIDIA打造的针对深度神�
 `chmod +x 你下载的cuda文件`
 2. 运行cuda文件(在cuda文件所在目录执行)  
 `./你下载的cuda文件`
+***
+2020-04-21更新
+
+详见：[参考资料1](https://forums.developer.nvidia.com/t/failing-to-install-10-1-via-run-file-on-rhel7-as-non-root/72087/5)
+
+这一次我装了cuda10.1版本，安装方式有所改变  
+
+`cuda_10.1.105_418.39_linux.run`是你下载的文件名，根据自己的情况确定
+
+`$HOME/cuda10.1`是将cuda安装在你的`home`目录下的`cuda10.1`文件夹中
+```
+./cuda_10.1.105_418.39_linux.run --toolkit --toolkitpath=$HOME/cuda10.1 --defaultroot=$HOME/cuda10.1
+```
+进入后将安装显卡驱动(driver)选项去掉，按Enter键  
+
+最后切换到`install`安装
+
+***
+
 3. 按`Ctrl+F`迅速阅读完安装协议
 4. 输入`accept`同意安装协议
 5. 询问是否安装显卡驱动(driver installation)，建议在此之前安装，此处选择**不安装（no）** 
 6. 输入cuda安装的位置
-  - 如果是root用户，可以直接使用默认选项（请记住这个目录，之后要用）
-  - 非root用户，输入个人用户的目录，如`/home/yourname/cuda9`,
+    - 如果是root用户，可以直接使用默认选项（请记住这个目录，之后要用）
+    - 非root用户，输入个人用户的目录，如`/home/yourname/cuda9`,
 7. cuda samples目录同上
 
 ## 安装cuDNN
@@ -93,9 +114,22 @@ export LD_LIBRARY_PATH=$HOME/cuda9/lib64/:$LD_LIBRARY_PATH
 
 ## 测试CUDA和cuDNN
 
-1. 进入安装CUDA时输入的cuda samples目录  
-`cd NVIDIA_CUDA-9.0_Samples`
+1. 进入安装CUDA时输入的cuda samples目录
+`cd NVIDIA_CUDA-9.0_Samples` 或者 `cd cuda/samples/1_Utilities/deviceQuery`  
 2. 输入`make`编译（如果之前执行过`make`，请先执行`make clean`清理）
+***
+如果此处出现`nvcc fatal   : Unsupported gpu architecture 'compute_75'`错误
+
+在Makefile的275行附近，有一个`SMS ?= 30 35 37 50 52 60 61 70 75`
+
+删除大于你GPU算力的数，比如我的是`GTX 1080Ti`，算力是6.1，所以删去70和75
+
+即改成`SMS ?= 30 35 37 50 52 60 61`
+
+重新make即可
+
+[算力查询](https://developer.nvidia.com/cuda-gpus#compute),进去选择你GPU的系列型号即可看到
+***
 3. 进入设备信息查询目录  
 `cd ~/NVIDIA_CUDA-9.0_Samples/bin/x86_64/linux/release`
 4. 运行` ./deviceQuery `  
@@ -138,3 +172,6 @@ to PATH in your /home/hj/.bashrc ? [yes|no]
 `pip install tensorflow==1.12`(1.12可替换为你的指定版本)
 
 **至此安装完毕**
+
+参考资料
+1. [NVIDIA Corporation - Failing to install 10.1 via .run file on RHEL7 as non-root](https://forums.developer.nvidia.com/t/failing-to-install-10-1-via-run-file-on-rhel7-as-non-root/72087/5)
