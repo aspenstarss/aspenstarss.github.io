@@ -19,6 +19,8 @@ tags:
 
 #### TensorFlow与CUDA、cuDNN版本的对应关系
 
+cuda与显卡驱动的对应关系见[NVIDIA CUDA Toolkit Release Notes](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html)中CUDA Driver项
+
  | 版本 | Python 版本 | 编译器 | 构建工具 | cuDNN | CUDA |
  | :---: | :---: | :---: | :---: | :---: | :---: |
 tensorflow_gpu-1.12.0 | 2.7、3.3-3.6 | GCC 4.8 | Bazel 0.15.0 | 7 | 9
