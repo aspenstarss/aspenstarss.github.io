@@ -171,7 +171,9 @@ to PATH in your /home/hj/.bashrc ? [yes|no]
 9. 启动虚拟环境  
 `source activate 环境名称`
 10. 安装tensorflow-gpu  
-`pip install tensorflow==1.12`(1.12可替换为你的指定版本)
+`pip install tensorflow-gpu==1.12`(1.12可替换为你的指定版本)
+
+`pip install tensorflow==1.12`(纯CPU版本)
 
 **至此安装完毕**
 
