@@ -177,5 +177,14 @@ to PATH in your /home/hj/.bashrc ? [yes|no]
 
 **至此安装完毕**
 
+## 问题解决
+```
+Loaded runtime CuDNN library: 7500 (compatibility version 7500) but source was compiled with 7004 (compatibility version 7000).  If using a binary install, upgrade your CuDNN library to match.
+```
+这个是由于`cudnn`版本没有下载正确，读一下错误提示，这里提到运行使用的是`7500`版本，但是源码是基于`7000`版本进行的编译，因此，直接去[官网](https://developer.nvidia.com/cudnn) 下载7.0.5版本的`cudnn`即可（根据错误提示，选择自己相应的版本）
+
+
+
+
 参考资料
 1. [NVIDIA Corporation - Failing to install 10.1 via .run file on RHEL7 as non-root](https://forums.developer.nvidia.com/t/failing-to-install-10-1-via-run-file-on-rhel7-as-non-root/72087/5)
