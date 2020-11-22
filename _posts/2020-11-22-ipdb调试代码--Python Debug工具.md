@@ -50,30 +50,30 @@ python -m ipdb your_code.py
 # 常用的调试命令
 ipdb 的命令跟 pdb 是一样的, 更多的用法可参考[pdb文档](https://docs.python.org/3.5/library/pdb.html)
 ## 断点设置
- | 命令 | 含义 | 
- | --- | --- | 
- | `b  10` | 断点设置在本文件的第10行 | 
- | `b  ots.py:20`  | 断点设置到 ots.py第20行, ots.py需要在 sys.path 中，当前目录已经默认存在 sys.path , 可通过 `..` 引用上一层目录的文件 | 
- | `condition bpnumber [condition]` | 只有当`[condition]`这个Bool表达式为 `true` 时, 才会设置这个断点 | 
- | `b`  | 查看断点及编号 | 
- | `cl 2`  | 删除第2个断点 | 
- | `disable` |  取消所有断点的功能,但仍然保留这些断点 | 
- | `enable` |  恢复断点的功能 | 
- | `tbreak` | 只生效一次的断点，使用方法同命令 `b` | 
+| 命令 | 含义 | 
+| --- | --- | 
+| `b  10` | 断点设置在本文件的第10行 | 
+| `b  ots.py:20`  | 断点设置到 ots.py第20行, ots.py需要在 sys.path 中，当前目录已经默认存在 sys.path , 可通过 `..` 引用上一层目录的文件 | 
+| `condition bpnumber [condition]` | 只有当`[condition]`这个Bool表达式为 `true` 时, 才会设置这个断点 | 
+| `b`  | 查看断点及编号 | 
+| `cl 2`  | 删除第2个断点 | 
+| `disable` |  取消所有断点的功能,但仍然保留这些断点 | 
+| `enable` |  恢复断点的功能 | 
+| `tbreak` | 只生效一次的断点，使用方法同命令 `b` | 
 
 ## 运行
- | 命令 | 含义 | 
- | --- | --- | 
- | `n`(next) | 单步运行 | 
- | `s`(step)) | 细点运行, 即如果当前是一个函数，会进入函数内部 | 
- | `c`(continue) | 一直运行到下一个断点 | 
- | `<ENTER>` | 重复上次命令 | 
- | `j(ump) lineNumber` |  忽略某段代码,直接跳到某行执行。只有在 call stack 的最底部才能作用 | 
- | `a` |  查看全部栈内变量 | 
- | `r`(return) |  直接执行至 return 语句 | 
- | `l`(list) |  查看运行到某处代码，`l 2,5` 查看第 2-5 行的源码 | 
- | `ll` |  查看整个源文件 | 
- | `p param` |  查看当前 变量`param`的值 | 
+| 命令 | 含义 | 
+| --- | --- | 
+| `n`(next) | 单步运行 | 
+| `s`(step)) | 细点运行, 即如果当前是一个函数，会进入函数内部 | 
+| `c`(continue) | 一直运行到下一个断点 | 
+| `<ENTER>` | 重复上次命令 | 
+| `j(ump) lineNumber` |  忽略某段代码,直接跳到某行执行。只有在 call stack 的最底部才能作用 | 
+| `a` |  查看全部栈内变量 | 
+| `r`(return) |  直接执行至 return 语句 | 
+| `l`(list) |  查看运行到某处代码，`l 2,5` 查看第 2-5 行的源码 | 
+| `ll` |  查看整个源文件 | 
+| `p param` |  查看当前 变量`param`的值 | 
 
 ## 重启或退出 debugger
 `restart` 或 `run` 命令
@@ -83,18 +83,23 @@ ipdb 的命令跟 pdb 是一样的, 更多的用法可参考[pdb文档](https://
 如果要一个全新的 debugger，可通过命令 `q`、`quit` 或 `exit` 退出 debugger 后进入
 
 ## 其他不太常用的命令
- | 命令 | 含义 | 
- | --- | --- | 
- | `w` |  列出目前call stack 中的所在层 | 
- | `d` |  在call stack中往下移一层 | 
- | `u` |  在call stack中往上移一层。如果在上移一层之后按下 n ,则会在上移之后的一层执行下一个叙述,之前的 function call 就自动返回 | 
- | `ignore` |  设定断点的忽略次数。如果没指定 count,其初始 为 0。当 count 为 0 时,断点会正常动作。若有指定 count,则每次执行到该中断, count 就少 1,直到 count 数为 0 | 
- | `pp` |  和 p 命令类似,但是使用 pprint module(没用过 pprint,详情请参考 Python Library Reference) | 
- | `alias` |  以一个"别名"代替"一群除错命令",有点类似 c/c 的 macro(详情请参考 Python Library Reference) | 
- | `unalias` |  取消某个 alias | 
- | `[!]statement` |  在目前的环境(context)中执行叙述 | 
+
+| 命令 | 含义 | 
+|---|---| 
+|`w`|列出目前call stack 中的所在层| 
+| `d` |  在call stack中往下移一层 | 
+| `u` |  在call stack中往上移一层。如果在上移一层之后按下 n ,则会在上移之后的一层执行下一个叙述,之前的 function call 就自动返回 | 
+| `ignore` |  设定断点的忽略次数。如果没指定 count,其初始 为 0。当 count 为 0 时,断点会正常动作。若有指定 count,则每次执行到该中断, count 就少 1,直到 count 数为 0 | 
+| `pp` |  和 p 命令类似,但是使用 pprint module(没用过 pprint,详情请参考 Python Library Reference) | 
+| `alias` |  以一个"别名"代替"一群除错命令",有点类似 c/c 的 macro(详情请参考 Python Library Reference) | 
+| `unalias` |  取消某个 alias | 
+| `[!]statement` |  在目前的环境(context)中执行叙述 | 
 
 ## 参考文献
 1. [ipdb 使用小记](http://wulc.me/2018/12/21/ipdb%20%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/)
 2. [使用IPDB调试Python代码](https://xmfbit.github.io/2017/08/21/debugging-with-ipdb/)
 3. [The python debugger(PDB)的简介](https://www.cnblogs.com/wei-li/archive/2012/05/02/2479082.html)
+
+| 命令 | 含义 | 
+|---|---|
+|1|2|
