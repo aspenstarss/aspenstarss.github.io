@@ -50,6 +50,7 @@ python -m ipdb your_code.py
 # 常用的调试命令
 ipdb 的命令跟 pdb 是一样的, 更多的用法可参考[pdb文档](https://docs.python.org/3.5/library/pdb.html)
 ## 断点设置
+
 | 命令 | 含义 | 
 | --- | --- | 
 | `b  10` | 断点设置在本文件的第10行 | 
@@ -62,6 +63,7 @@ ipdb 的命令跟 pdb 是一样的, 更多的用法可参考[pdb文档](https://
 | `tbreak` | 只生效一次的断点，使用方法同命令 `b` | 
 
 ## 运行
+
 | 命令 | 含义 | 
 | --- | --- | 
 | `n`(next) | 单步运行 | 
@@ -85,7 +87,7 @@ ipdb 的命令跟 pdb 是一样的, 更多的用法可参考[pdb文档](https://
 ## 其他不太常用的命令
 
 | 命令 | 含义 | 
-|---|---| 
+| --- | --- | 
 |`w`|列出目前call stack 中的所在层| 
 | `d` |  在call stack中往下移一层 | 
 | `u` |  在call stack中往上移一层。如果在上移一层之后按下 n ,则会在上移之后的一层执行下一个叙述,之前的 function call 就自动返回 | 
@@ -99,7 +101,3 @@ ipdb 的命令跟 pdb 是一样的, 更多的用法可参考[pdb文档](https://
 1. [ipdb 使用小记](http://wulc.me/2018/12/21/ipdb%20%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0/)
 2. [使用IPDB调试Python代码](https://xmfbit.github.io/2017/08/21/debugging-with-ipdb/)
 3. [The python debugger(PDB)的简介](https://www.cnblogs.com/wei-li/archive/2012/05/02/2479082.html)
-
-| 命令 | 含义 | 
-|---|---|
-|1|2|
