@@ -1,5 +1,5 @@
 
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/home-assistant/home-assistant-iOS/blob/master/LICENSE)
+[![License MIT](https://img.shields.io/github/license/aspenstarss/aspenstarss.github.io)](https://github.com/aspenstarss/aspenstarss.github.io/LICENSE)
 
 
 欢迎访问我的博客 [星点](http://aspenstarss.github.io)
