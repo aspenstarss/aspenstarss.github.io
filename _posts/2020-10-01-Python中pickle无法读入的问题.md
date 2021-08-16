@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      pickle读入时提示AttributeError: Can't get attribute 'XXX' on <module '__main__' from '
+title:      pickle读入时提示AttributeError Can't get attribute 'XXX' on <module '__main__' from '
 date:       2020-10-01
 author:     AspenStars
 header-img: img/post-bg-map.jpg
